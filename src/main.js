@@ -50,7 +50,7 @@ async function handleSearch(event) {
 
     queryParams.maxPage = Math.ceil(totalHits / queryParams.pageSize);
     createMarkup(hits);
-    
+
     if (hits.length > 0 && hits.length !== totalHits) {
       refs.loadMoreBtn.classList.remove('is-hidden');
       refs.loadMoreBtn.addEventListener('click', loadMoreSearch);

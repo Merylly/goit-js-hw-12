@@ -97,9 +97,7 @@ button {
   }
 }
 
-.is-hidden {
-  display: none;
-}
+
 
 .gallery-image {
   width: 270px;
@@ -131,4 +129,8 @@ button {
   letter-spacing: 0.64px;
   margin: 15px auto;
   display: block;
+}
+
+.is-hidden {
+  display: none;
 }
