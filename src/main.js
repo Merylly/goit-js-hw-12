@@ -29,11 +29,13 @@ async function handleSearch(event) {
   refs.resultContainer.innerHTML = '';
   queryParams.page = 1;
   refs.loader.classList.remove('is-hidden');
+  refs.loadMoreBtn.classList.add('is-hidden');
 
   const form = event.currentTarget;
   queryParams.query = form.elements.picture.value.trim();
 
   if (!queryParams.query) {
+    refs.loader.classList.add('is-hidden');
     return;
   }
 
@@ -54,6 +56,15 @@ async function handleSearch(event) {
     if (hits.length > 0 && hits.length !== totalHits) {
       refs.loadMoreBtn.classList.remove('is-hidden');
       refs.loadMoreBtn.addEventListener('click', loadMoreSearch);
+    }
+    
+    if (queryParams.page === queryParams.maxPage) {
+      refs.loadMoreBtn.classList.add('is-hidden');
+      refs.loadMoreBtn.removeEventListener('click', loadMoreSearch);
+      iziToast.info({
+        position: 'topRight',
+        message: "We're sorry, but you've reached the end of search results.",
+      });
     }
   } catch (err) {
     iziToast.error({ position: 'topRight', message: 'Something wrong!' });
