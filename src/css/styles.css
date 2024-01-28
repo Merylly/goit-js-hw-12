@@ -2,7 +2,6 @@
   box-sizing: border-box;
 }
 
-
 ul {
   list-style-type: none;
   padding: 0;
@@ -24,7 +23,6 @@ button {
   padding: 0 15px;
   margin: 0 auto;
 }
-
 
 .form {
   display: flex;
@@ -62,7 +60,7 @@ button {
 }
 
 .form-button:hover {
-  background-color: #6C8CFF;
+  background-color: #6c8cff;
 }
 
 .gallery {
@@ -72,7 +70,7 @@ button {
 }
 
 .gallery-item {
-  flex-basis: calc((100% - 48px) / 3);
+  flex-basis: calc((100% - 72px) / 4);
   border: 1px solid #808080;
   border-radius: 4px;
 }
@@ -81,7 +79,7 @@ button {
   margin: 30px auto;
   width: 48px;
   height: 48px;
-  border: 5px solid #6C8CFF;
+  border: 5px solid #6c8cff;
   border-bottom-color: transparent;
   border-radius: 50%;
   display: inline-block;
@@ -104,20 +102,33 @@ button {
 }
 
 .gallery-image {
-  width: 370px;
-  height: 270px;
+  width: 270px;
+  height: 200px;
   object-fit: cover;
 }
 
 .info-list {
-  padding: 10px 10px;
+  padding: 10px 5px;
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 5px;
+  font-size: 14px;
 }
 
 .info-item {
   flex-basis: calc((100% - 10px) / 2);
-  
-  
+}
+
+.more-button {
+  padding: 8px 16px;
+  border-radius: 8px;
+  background-color: #4e75ff;
+  color: #fff;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px; /* 150% */
+  letter-spacing: 0.64px;
+  margin: 15px auto;
+  display: block;
 }
