@@ -62,7 +62,7 @@ async function handleSearch(event) {
     if (queryParams.page === queryParams.maxPage) {
       iziToast.info({
         position: 'topRight',
-        message: "We're sorry, but you've reached the end of search results.",
+        message: "That's all we find!",
       });
     }
   } catch (err) {
