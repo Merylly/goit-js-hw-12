@@ -59,7 +59,8 @@ button {
   letter-spacing: 0.64px;
 }
 
-.form-button:hover {
+.form-button:hover,
+.more-button:hover {
   background-color: #6c8cff;
 }
 
@@ -96,8 +97,6 @@ button {
     transform: rotate(360deg);
   }
 }
-
-
 
 .gallery-image {
   width: 270px;
