@@ -31,6 +31,7 @@ async function handleSearch(event) {
 
   refs.loader.classList.remove('is-hidden');
   refs.loadMoreBtn.classList.add('is-hidden');
+  refs.loadMoreBtn.addEventListener('click', loadMoreSearch);
 
   const form = event.currentTarget;
   queryParams.query = form.elements.picture.value.trim();
@@ -56,7 +57,6 @@ async function handleSearch(event) {
 
     if (hits.length > 0 && hits.length !== totalHits) {
       refs.loadMoreBtn.classList.remove('is-hidden');
-      refs.loadMoreBtn.addEventListener('click', loadMoreSearch);
     }
 
     if (queryParams.page === queryParams.maxPage) {
